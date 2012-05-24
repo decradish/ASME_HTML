@@ -302,3 +302,15 @@ table#bottom_content td#center_td h3 span{
 #a_wrapper a{
 	color: #333;
 }
+
+/******** Coming Soon page *********/
+body#coming_soon{
+	background:#38393b url(../../im/coming_soon_bg.jpg) center 0 no-repeat;
+}
+#coming_soon_footer{
+	width:980px;
+	color: #fff;
+	font-size:11px;
+	margin: 0 auto;
+	padding:792px 0 20px;
+}
