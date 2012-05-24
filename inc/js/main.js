@@ -118,6 +118,12 @@ function pop_confirm(msg){
 	}
 }
 
+var current = 0;
+function slide(target){
+	$('.news_ul li').hide();
+	$('.news_ul li').eq(target).show();
+	$('#current_news').text(target+1);
+}
 $(function() {
     if (window.PIE) {
         $('*').each(function() {
@@ -127,43 +133,30 @@ $(function() {
 	
 	width = $(window).width();
 	height = $(window).height();
-	amend_footer();
+	//amend_footer();
 	$(window).resize(function() {
 		width = $(this).width();
 		height = $(this).height();
-		amend_footer();
+		//amend_footer();
 	});
 	
-	//for select functions
-	$('.border_select')
-	.focus(function(){
-		if(!$(this).hasClass('disable')){
-			var select_ul = $(this).next('ul.select_ul');
-			select_ul.show();
+	//for News click
+	var all = $('.news_ul li').length - 1;
+	$('.prev').click(function(){
+		current --;
+		if(current < 0){
+			current = all;
 		}
-	})
-	.blur(function(){
-		var select_ul = $(this).next('ul.select_ul');
-		select_ul.hide();
-		if($('.selected').length > 0){
-			$(this).val($('.selected').text());
-		}
+		slide(current);
 	});
-	$('.select_ul li').hover(function(){
-		$(this).addClass('selected');	
-	},function(){
-		$(this).removeClass('selected');
+	$('.next').click(function(){
+		current ++;
+		if(current > all){
+			current = 0;
+		}
+		slide(current);
 	});
 	
-	//for view all users in Question 8 table of "Review and Submit" page
-	$('#look_end').click(function(){
-		$('#look_end, .front').hide();
-		$('#look_front, .end').show();	
-	});
-	$('#look_front').click(function(){
-		$('#look_front, .end').hide();
-		$('#look_end, .front').show();	
-	});
 });
 
 
