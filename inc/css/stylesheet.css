@@ -54,7 +54,7 @@ body{
 #header{
 	position:relative;
 	height:135px;
-	background:#fff url(../../im/logo.jpg) left top no-repeat;
+	background:#fff url(../../im/logo_new.jpg) 3px top no-repeat;
 	-webkit-box-shadow: #000 0px 0px 20px;
 	   -moz-box-shadow: #000 0px 0px 20px;
 	        box-shadow: #000 0px 0px 20px;
@@ -68,7 +68,7 @@ body{
 #header_right_inner{
 	background: url(../../im/right_shadow.png) 0 0 no-repeat;
 	height:96px;
-	width:735px;
+	width:733px;
 	padding: 4px 0px 0px 7px;
 }
 #nav{
@@ -77,23 +77,155 @@ body{
 	float: left;
 	background:url(../../im/nav_bg.jpg) 0 0 repeat-x;
 }
-#nav li{
+#nav > li{
 	height:35px;
 	float: left;
 }
-#nav li a{
+#nav > li > a{
 	text-decoration: none;
 	color: #fff;
-	padding: 0px 10px;
+	padding: 0px 8px;
 	font:normal 14px/35px Helvetica, Arial, "MS Trebuchet", sans-serif;
 	display: inline-block;
 }
-#nav li a.current,
-#nav li a:hover{
+#nav > li > a.current,
+#nav > li > a:hover{
 	background:url(../../im/nav_current_bg.jpg) 0 0 repeat-x;
 }
-#nav li a.current{
+#nav > li > a.current{
 	font-weight:bold;
+}
+#nav .sec_lvl{
+	display:none;
+	background:#b52530 url(../../im/nav_bg_lvl_2.jpg) 0 0 repeat-x;
+}
+#nav > li:hover .sec_lvl{
+	display:block;
+}
+#nav .sec_lvl > li{
+}
+#nav .sec_lvl > li:hover{
+	background:#d8202e;
+}
+#nav .sec_lvl > li > a.has_child{
+	background:url(../../im/has_child.png) right center no-repeat;
+}
+#nav .sec_lvl > li:hover > a.has_child{
+	background:url(../../im/has_child_current.png) right center no-repeat;
+}
+#nav .sec_lvl > li > a{
+	display: block;
+	padding:0px 24px 0 10px;
+	color:#fff;
+	text-decoration:none;
+	font:normal 12px/22px Arial, "MS Trebuchet", sans-serif;
+}
+#sec_lvl_2 > li > a{
+	/*width:130px;*/
+}
+#nav .thr_lvl{
+	display:none;
+	position: absolute;
+	background:#d8202e;
+	margin:-88px 199px;
+}
+#nav .sec_lvl > li:hover > .thr_lvl{
+	display:block;
+}
+#nav .thr_lvl a{
+	display: block;
+	padding:0px 10px 0 10px;
+	color:#fff;
+	text-decoration:none;
+	font:normal 12px/22px Arial, "MS Trebuchet", sans-serif;
+}
+#nav .thr_lvl a:hover{
+	text-decoration:underline;
+	font:bold 12px/22px Arial, "MS Trebuchet", sans-serif;
+}
+#nav .sec_lvl > li.two_lines{
+	padding-top:3px;
+	padding-bottom:3px;
+}
+#nav .sec_lvl > li.two_lines > a{
+	line-height:12px;
+}
+#fir_lvl_2{
+	width:90px;
+	width:110px\9;
+}
+#fir_lvl_2 > ul{
+	width:199px;
+}
+#fir_lvl_2 > .sec_lvl > li > a{
+	width:165px;
+}
+#fir_lvl_2 .sec_lvl{
+	/* height:132px; */
+	height:auto;
+}
+#fir_lvl_2 .thr_lvl a{
+	width:182px;
+}
+#fir_lvl_4{
+	width:91px;
+	width:110px\9;
+}
+#fir_lvl_4 > ul{
+	width:165px;
+}
+#fir_lvl_4 > .sec_lvl > li > a{
+	width:130px;
+}
+#fir_lvl_6{
+	width:63px;
+	width:80px\9;
+}
+#fir_lvl_6 > ul{
+	width:235px;
+}
+#fir_lvl_6 > .sec_lvl > li > a{
+	width:200px;
+}
+#fir_lvl_7{
+	width:103px;
+	width:130px\9;
+}
+#fir_lvl_7 > ul{
+	width:225px;
+}
+#fir_lvl_7 > .sec_lvl > li > a{
+	width:190px;
+}
+#fir_lvl_7 .sec_lvl{
+	height:228px;
+}
+#fir_lvl_7 .thr_lvl{
+	margin:-22px 0 0 225px;
+	height:228px;
+}
+#fir_lvl_7 #thr_lvl_10.thr_lvl{
+	margin:-198px 0 0 225px;
+}
+#fir_lvl_7 .thr_lvl a{
+	/* width:199px; */
+	width:205px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#fir_lvl_7 .thr_lvl a{
+		width:199px;/* Opera、Safari 、Chrome */
+	}
+}
+#nav #fb_btn{
+	text-indent:-9999px;
+	float:right;
+	width:30px;
+	height:35px;
+	background:url(../../im/fb.png) center center no-repeat;
+}
+#nav #fb_btn a{
+	display:block;
+	background:none;
 }
 #banner{
 	height:264px;
@@ -246,11 +378,12 @@ table#bottom_content{
 	margin-bottom:69px;
 }
 table#bottom_content td{
-	background:#a4a4a4;
+	background:#eeeeee url(../../im/ad_bg_big.jpg) right 0 no-repeat;
 	height:90px;
 	border-top:10px solid #fff;
 }
 table#bottom_content td:first-child{
+	background:#f0f0f0 url(../../im/ad_bg_small.jpg) 0 0 no-repeat;
 	border-right:10px solid #fff;
 	width:350px;
 }
@@ -263,10 +396,19 @@ table#bottom_content td img{
 table#bottom_content td.ad_td{
 	border-left:10px solid #fff;
 	width:190px;
+	vertical-align:top;
+}
+table#bottom_content td.ad_td div{
+	position: absolute;/*kn*/
+	display: none;
+}
+table#bottom_content td.ad_td div.square_1{
+	display: block;
 }
 table#bottom_content td#center_td{
 	background:url(../../im/center_td_bg.jpg) 0 0 no-repeat;
 	width:400px;
+	width:401px\9;
 	vertical-align: top;
 }
 table#bottom_content td#center_td h3{
