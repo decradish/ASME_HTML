@@ -126,8 +126,21 @@ function slide(target){
 }
 
 //for rotate square banner
+var rotate_cur = 1;
 function rotate(){
 	var time = 1 * 1000;
+	var rotate_all = $('.ad_td > div').length-1;
+	
+	$('.ad_td > div')
+	.fadeOut()
+	.eq(rotate_cur).fadeIn();
+	
+	rotate_cur ++;
+	if(rotate_cur > rotate_all){
+		rotate_cur = 0;	
+	}
+	
+	/*
 	$('.ad_td > div').each(function(){
 		if($(this).css('display') == 'none'){
 			$(this).fadeIn(time);
@@ -135,6 +148,7 @@ function rotate(){
 			$(this).fadeOut(time);
 		}
 	});
+	*/
 }
 
 
@@ -174,6 +188,7 @@ $(function() {
 	//for rotate square banner
 	var rotate_var = setInterval('rotate()', 10000);
 	
+	//for the second nav hvoer
 	$('#fir_lvl_2 .sec_lvl > li:last-child').hover(function(){	
 		$('#fir_lvl_2 .sec_lvl').height(132);
 	},function(){
