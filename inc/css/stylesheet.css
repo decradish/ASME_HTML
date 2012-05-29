@@ -59,6 +59,12 @@ body{
 	   -moz-box-shadow: #000 0px 0px 20px;
 	        box-shadow: #000 0px 0px 20px;
 }
+#home_link{
+	display: block;
+	float:left;
+	width:210px;
+	height:100px;
+}
 #header_right{
 	float: right;
 	background: url(../../im/right_bg.jpg) 0 0 repeat-x;
@@ -86,18 +92,23 @@ body{
 	color: #fff;
 	padding: 0px 8px;
 	font:normal 14px/35px Helvetica, Arial, "MS Trebuchet", sans-serif;
+	height:35px;
 	display: inline-block;
+	/*text-indent:-9999px;*/
+	background:url(../../im/nav.png) 0 center no-repeat;
 }
-#nav > li > a.current,
-#nav > li > a:hover{
+#nav > li.current,
+#nav > li:hover{
 	background:url(../../im/nav_current_bg.jpg) 0 0 repeat-x;
 }
 #nav > li > a.current{
-	font-weight:bold;
+	/*font-weight:bold;*/
 }
 #nav .sec_lvl{
 	display:none;
 	background:#b52530 url(../../im/nav_bg_lvl_2.jpg) 0 0 repeat-x;
+	margin-top:-5px;
+	*margin-top:0px;
 }
 #nav > li:hover .sec_lvl{
 	display:block;
@@ -150,9 +161,17 @@ body{
 #nav .sec_lvl > li.two_lines > a{
 	line-height:12px;
 }
+#nav > li#fir_lvl_1 > a{
+	width:45px;
+	background-position:13px center;
+}
 #fir_lvl_2{
 	width:90px;
-	width:110px\9;
+	/*width:110px\9;*/
+}
+#nav > li#fir_lvl_2 > a{
+	width:74px;
+	background-position:-239px center;
 }
 #fir_lvl_2 > ul{
 	width:199px;
@@ -167,9 +186,17 @@ body{
 #fir_lvl_2 .thr_lvl a{
 	width:182px;
 }
+#nav > li#fir_lvl_3 > a{
+	width:70px;
+	background-position:-149px center;
+}
 #fir_lvl_4{
 	width:91px;
-	width:110px\9;
+	/*width:110px\9;*/
+}
+#nav > li#fir_lvl_4 > a{
+	width:75px;
+	background-position:-238px center;
 }
 #fir_lvl_4 > ul{
 	width:165px;
@@ -177,9 +204,21 @@ body{
 #fir_lvl_4 > .sec_lvl > li > a{
 	width:130px;
 }
+#fir_lvl_5{
+	width:136px;
+	/*width:110px\9;*/
+}
+#nav > li#fir_lvl_5 > a{
+	width:120px;
+	background-position:-337px center;
+}
 #fir_lvl_6{
 	width:63px;
-	width:80px\9;
+	/*width:80px\9;*/
+}
+#nav > li#fir_lvl_6 > a{
+	width:47px;
+	background-position:-480px center;
 }
 #fir_lvl_6 > ul{
 	width:235px;
@@ -189,7 +228,11 @@ body{
 }
 #fir_lvl_7{
 	width:103px;
-	width:130px\9;
+	/*width:130px\9;*/
+}
+#nav > li#fir_lvl_7 > a{
+	width:87px;
+	background-position:-551px center;
 }
 #fir_lvl_7 > ul{
 	width:225px;
@@ -209,19 +252,64 @@ body{
 }
 #fir_lvl_7 .thr_lvl a{
 	/* width:199px; */
-	width:205px;
+	width:188px;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
 	#fir_lvl_7 .thr_lvl a{
-		width:199px;/* Opera、Safari 、Chrome */
+		width:188px;
+}*//* Opera、Safari 、Chrome */
 	}
+#fir_lvl_8{
+	width:86px;
+}
+#nav > li#fir_lvl_8 > a{
+	width:70px;
+	background-position:-657px center;
+}
+#nav #right_li{
+	float: right;
+}
+#nav #right_li:hover{
+	background:none;
+}
+#nav #right_li *{
+	float: left;
+}
+#search{
+	border:none;
+	margin: 0;
+	padding: 0;
+	background:#fff;
+	height:20px;
+	width:115px;
+	margin: 7px 0px 40px 0px;
+}
+#search_btn{
+	border:none;
+	margin: 0;
+	padding: 0;
+	height:20px;
+	width:22px;
+	margin: 7px 4px 0px 0px;
+	background: #fff url(../../im/search.jpg) center center no-repeat;
+}
+#nav #like_btn{
+	/*text-indent:-10000px;*/
+	/*float:right;*/
+	width:21px;
+	height:35px;
+	background:url(../../im/like.png) center center no-repeat;
+	margin:0 5px 0 0;
+	padding:0;
 }
 #nav #fb_btn{
-	text-indent:-9999px;
-	float:right;
-	width:30px;
+	/*text-indent:-10000px;*/
+	/*float:right;*/
+	width:23px;
 	height:35px;
-	background:url(../../im/fb.png) center center no-repeat;
+	background:url(../../im/fb.png) center 7px no-repeat;
+	margin:0 3px 0 0;
+	padding:0;
 }
 #nav #fb_btn a{
 	display:block;
@@ -259,7 +347,8 @@ h1{
 }
 h1 + p{
 	font:normal 14px Arial, "MS Trebuchet", sans-serif;
-	padding-right:20px;
+	padding-right:10px;
+	text-align:justify;
 }
 /*h1{
 	filter：shadow(Color=black,Direction=0,Strength=200);
@@ -405,19 +494,72 @@ table#bottom_content td.ad_td div{
 table#bottom_content td.ad_td div.square_1{
 	display: block;
 }
+table#bottom_content td#magazine_td{
+	background:url(../../im/center_td_bg.jpg) 0 0 no-repeat;
+	width:350px;
+	width:350px\9;
+	vertical-align: top;
+}
 table#bottom_content td#center_td{
 	background:url(../../im/center_td_bg.jpg) 0 0 no-repeat;
 	width:400px;
 	width:401px\9;
 	vertical-align: top;
 }
+table#bottom_content td#magazine_td h3,
 table#bottom_content td#center_td h3{
 	border:none;
 	padding:0 14px;
 	width:auto;
 }
+table#bottom_content td#magazine_td h3{
+	margin-bottom:3px;
+}
+table#bottom_content td#magazine_td h3 span,
 table#bottom_content td#center_td h3 span{
 	color: #333333;
+}
+.mgz_ul li{
+	background:url(../../im/li_dot.png) 0 8px no-repeat;
+	padding:0 0 0 15px;
+	line-height:14px;
+	color: #656565;
+}
+.mgz_ul li span,
+.mgz_ul li strong{
+	display:block;
+	clear: both;
+	color: #000;
+}
+.mgz_wrapper{
+	padding:0 0 0 20px;
+	float: left;
+}
+.mgz_wrapper .media{
+	margin:3px 0 0 0px;
+	color: #fff;
+}
+.digest{
+	font:normal 18px Helvetica, Arial, sans-serif;
+	clear: both;
+}
+.digest a{
+	display: inline-block;
+}
+.mgz_cover{
+	height:153px;
+	width:123px;
+	background:url(../../im/mgz.jpg) right 0 no-repeat;
+	float: right;
+}
+.issue{
+	background:#d12931;
+	color: #fff;
+	width:111px;
+	height:26px;
+	text-align:center;
+	font:bold 16px/26px Arial, Helvetica, sans-serif;
+	margin-top:122px;
 }
 .center_ul{
 	/*list-style: disc;*/
@@ -436,15 +578,26 @@ table#bottom_content td#center_td h3 span{
 	text-decoration:underline;
 }
 #footer{
-	background:url(../../im/footer_bg.jpg) 0 0 repeat-x;
+	background:#e2e2e2 url(../../im/footer_bg.jpg) 0 0 repeat-x;
 }
 #real_footer{
 	width:960px;
-	height:60px;
+	/*height:60px;*/
 	margin:0 auto;
-	line-height:60px;
+	line-height:48px;
 	font-size:11px;
 	color: #333333;
+}
+#partners{
+	height:87px;
+	color: #5c5c5c;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	padding-top:15px;
+	border-bottom:1px solid #c7c6c7;
+	background:url(../../im/partners.jpg) 0 32px no-repeat;
+}
+#footer_bottom{
+	border-top:1px solid #ffffff;
 }
 #a_wrapper{
 	float: right;
@@ -463,4 +616,20 @@ body#coming_soon{
 	font-size:11px;
 	margin: 0 auto;
 	padding:700px 0 20px;
+}
+
+/******* Subpage *********/
+body.sub_body{
+	/*background:url(image-url.gif) center 0 repeat-x;*/
+}
+.big_black{
+	font:normal 38px Helvetica, Arial, sans-serif;
+	color:#333333;
+}
+.banner_left.sub{
+	padding-top:70px;
+}
+#sub_content{
+	height:500px;
+	background:#fff;
 }
