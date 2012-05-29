@@ -151,6 +151,20 @@ function rotate(){
 	*/
 }
 
+//for rotate main banner
+var current_banner = 1;
+var whole_banner   = 5;
+function rotate_banner(){
+	for(var i = 1; i <= whole_banner; i ++){
+		$('body').removeClass('banner_'+i);
+	}
+	$('body').addClass('banner_'+current_banner);
+	current_banner ++;
+	if(current_banner > whole_banner){
+		current_banner = 1;
+	}
+}
+
 
 $(function() {
     if (window.PIE) {
@@ -194,20 +208,8 @@ $(function() {
 	},function(){
 		$('#fir_lvl_2 .sec_lvl').height('auto');
 	});
+
+	//for rotate main banner
+	var rotate_banner = setInterval('rotate_banner()', 10000);
 	
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

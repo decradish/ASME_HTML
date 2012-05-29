@@ -37,7 +37,23 @@ html{
 	/*height:100%;*/
 }
 body{
-	background:#fff url(../../im/body_bg.jpg) center 0 repeat-x;
+	/*background:#fff url(../../im/body_bg.jpg) center 0 repeat-x;*/
+	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
+}
+body.banner_1{
+	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
+}
+body.banner_2{
+	background:#fff url(../../im/banner_img2.jpg) center 0 repeat-x;
+}
+body.banner_3{
+	background:#fff url(../../im/banner_img3.jpg) center 0 repeat-x;
+}
+body.banner_4{
+	background:#fff url(../../im/banner_img4.jpg) center 0 repeat-x;
+}
+body.banner_5{
+	background:#fff url(../../im/banner_img5.jpg) center 0 repeat-x;
 }
 #login_box{
 	width:41px;
@@ -92,7 +108,7 @@ body{
 	color: #fff;
 	padding: 0px 8px;
 	font:normal 14px/35px Helvetica, Arial, "MS Trebuchet", sans-serif;
-	height:35px;
+	height:auto;
 	display: inline-block;
 	/*text-indent:-9999px;*/
 	background:url(../../im/nav.png) 0 center no-repeat;
@@ -108,7 +124,7 @@ body{
 	display:none;
 	background:#b52530 url(../../im/nav_bg_lvl_2.jpg) 0 0 repeat-x;
 	margin-top:-5px;
-	*margin-top:0px;
+	margin-top:0px;
 }
 #nav > li:hover .sec_lvl{
 	display:block;
