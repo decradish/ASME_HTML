@@ -46,6 +46,13 @@ body.banner_1{
 body.banner_2{
 	background:#fff url(../../im/banner_img2.jpg) center 0 repeat-x;
 }
+body.banner_2 h1{
+	text-shadow: none;
+	color: #000;
+}
+body.banner_2 h1 + p{
+	color:#333;
+}
 body.banner_3{
 	background:#fff url(../../im/banner_img3.jpg) center 0 repeat-x;
 }
