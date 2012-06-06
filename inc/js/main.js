@@ -241,5 +241,13 @@ $(function() {
 
 	//for rotate main banner
 	var rotate_banner = setInterval('rotate_banner()', 8000);
+
+	//for expandable banner
+	var expandable = $('#expandable');
+	$('#header_right_inner').hover(function(){
+		expandable.stop().fadeIn();
+	},function(){
+		expandable.stop().fadeOut();
+	});
 	
 });

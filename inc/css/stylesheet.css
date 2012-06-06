@@ -62,6 +62,13 @@ body.banner_4{
 body.banner_5{
 	background:#fff url(../../im/banner_img5.jpg) center 0 repeat-x;
 }
+body.banner_5 h1{
+	text-shadow: none;
+	color: #000;
+}
+body.banner_5 h1 + p{
+	color:#000;
+}
 #login_box{
 	width:41px;
 	height:170px;
@@ -99,6 +106,12 @@ body.banner_5{
 	height:96px;
 	width:733px;
 	padding: 4px 0px 0px 7px;
+}
+#expandable{
+	display: none;
+	position: absolute;
+	top:0;
+	*margin-left:-732px;
 }
 #nav{
 	height:35px;
