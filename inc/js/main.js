@@ -153,7 +153,7 @@ function rotate(){
 
 //for rotate main banner
 var current_banner = 1;
-var whole_banner   = 5;
+var whole_banner   = 3;
 function rotate_banner(){
 	for(var i = 1; i <= whole_banner; i ++){
 		$('body').removeClass('banner_'+i);

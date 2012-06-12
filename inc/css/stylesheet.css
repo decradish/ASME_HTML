@@ -41,23 +41,23 @@ body{
 	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
 }
 body.banner_1{
-	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
-}
-body.banner_2{
 	background:#fff url(../../im/banner_img2.jpg) center 0 repeat-x;
 }
-body.banner_2 h1{
+body.banner_1 h1{
 	text-shadow: none;
 	color: #000;
 }
-body.banner_2 h1 + p{
+body.banner_1 h1 + p{
 	color:#333;
 }
-body.banner_3{
+body.banner_2{
 	background:#fff url(../../im/banner_img3.jpg) center 0 repeat-x;
 }
-body.banner_4{
+body.banner_3{
 	background:#fff url(../../im/banner_img4.jpg) center 0 repeat-x;
+}
+body.banner_4{
+	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
 }
 body.banner_5{
 	background:#fff url(../../im/banner_img5.jpg) center 0 repeat-x;
@@ -465,8 +465,8 @@ h3 a{
 .speaders_content{
 	display:block;
 	width:164px;
-	height:98px;
-	padding:10px 0 0 10px;
+	height:58px;
+	padding:50px 0 0 10px;
 	background:url(../../im/speakers_bg.jpg) 0 0 no-repeat;
 	font:normal 18px/20px Helvetica, Arial, sans-serif;
 	color:#000;
