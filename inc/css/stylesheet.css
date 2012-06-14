@@ -41,7 +41,7 @@ body{
 	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
 }
 body.banner_1{
-	background:#fff url(../../im/banner_img2.jpg) center 0 repeat-x;
+	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
 }
 body.banner_1 h1{
 	text-shadow: none;
@@ -51,23 +51,19 @@ body.banner_1 h1 + p{
 	color:#333;
 }
 body.banner_2{
-	background:#fff url(../../im/banner_img3.jpg) center 0 repeat-x;
+	background:#fff url(../../im/banner_img2.jpg) center 0 repeat-x;
 }
 body.banner_3{
-	background:#fff url(../../im/banner_img4.jpg) center 0 repeat-x;
+	background:#fff url(../../im/banner_img3.jpg) center 0 repeat-x;
 }
 body.banner_4{
-	background:#fff url(../../im/banner_img1.jpg) center 0 repeat-x;
+	background:#fff url(../../im/banner_img4.jpg) center 0 repeat-x;
 }
 body.banner_5{
 	background:#fff url(../../im/banner_img5.jpg) center 0 repeat-x;
 }
-body.banner_5 h1{
-	text-shadow: none;
-	color: #000;
-}
-body.banner_5 h1 + p{
-	color:#000;
+body.banner_6{
+	background:#fff url(../../im/banner_img6.jpg) center 0 repeat-x;
 }
 #login_box{
 	width:41px;
