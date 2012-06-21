@@ -461,8 +461,8 @@ h3 a{
 .speaders_content{
 	display:block;
 	width:164px;
-	height:58px;
-	padding:50px 0 0 10px;
+	height:83px;
+	padding:25px 0 0 10px;
 	background:url(../../im/speakers_bg.jpg) 0 0 no-repeat;
 	font:normal 18px/20px Helvetica, Arial, sans-serif;
 	color:#000;
@@ -515,10 +515,12 @@ h4{
 h4 + p{
 	padding-left:10px;
 }
-.news_pag{
+.news_pag,
+.promotion_pag{
 	float: right;
 }
-.news_pag li{
+.news_pag li,
+.promotion_pag li{
 	float: left;
 }
 .prev,
@@ -528,6 +530,10 @@ h4 + p{
 	background-image:url(../../im/arrow.png);
 	background-repeat:no-repeat;
 	cursor: pointer;
+}
+.promotion_pag .prev,
+.promotion_pag .next{
+	background-image:url(../../im/arrow_black.png);
 }
 .prev{
 	background-position: center 5px;
@@ -635,8 +641,13 @@ table#bottom_content td#center_td h3 span{
 	margin-top:122px;
 }
 .center_ul{
+	display: none;
 	/*list-style: disc;*/
 	padding:0 10px 0 15px;
+	height:125px;
+}
+.center_ul.current{
+	display: block;
 }
 .center_ul li{
 	font:normal 12px Arial, 'MS Trebuchet', sans-serif;

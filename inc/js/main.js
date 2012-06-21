@@ -1,5 +1,5 @@
 /***********************************
-This JS file is created for ASME. 
+This JS file is created for ASME Website. 
 Begain editing from 24th May 2012
 Edited by Kangning
 Contact:
@@ -119,10 +119,11 @@ function pop_confirm(msg){
 }
 
 var current = 0;
-function slide(target){
-	$('.news_ul li').hide();
-	$('.news_ul li').eq(target).show();
-	$('#current_news').text(target+1);
+var pro_current = 0;
+function slide(target, body, count){
+	$(body).hide();
+	$(body).eq(target).show();
+	$(count).text(target+1);
 }
 
 //for rotate square banner
@@ -184,19 +185,36 @@ $(function() {
 	
 	//for News click
 	var all = $('.news_ul li').length - 1;
-	$('.prev').click(function(){
+	$('.news_pag .prev').click(function(){
 		current --;
 		if(current < 0){
 			current = all;
 		}
-		slide(current);
+		slide(current, '.news_ul li', '#current_news');
 	});
-	$('.next').click(function(){
+	$('.news_pag .next').click(function(){
 		current ++;
 		if(current > all){
 			current = 0;
 		}
-		slide(current);
+		slide(current, '.news_ul li', '#current_news');
+	});
+	
+	//for Promotion click
+	var pro_all = $('.center_ul').length - 1;
+	$('.promotion_pag .prev').click(function(){
+		pro_current --;
+		if(pro_current < 0){
+			pro_current = pro_all;
+		}
+		slide(pro_current, '.center_ul', '#current_pro');
+	});
+	$('.promotion_pag .next').click(function(){
+		pro_current ++;
+		if(pro_current > pro_all){
+			pro_current = 0;
+		}
+		slide(pro_current, '.center_ul', '#current_pro');
 	});
 
 	//for rotate square banner
